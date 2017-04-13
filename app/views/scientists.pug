@@ -1,0 +1,12 @@
+extends layout
+	
+block content
+
+	h1 All Scientists	
+	ul
+	each scientist in scientists
+		li
+			- var nameString = scientist.name
+			a(href='scientists/' + scientist.name)=nameString
+			
+	a(href='scientists/' + 'suggest') Suggest a scientist

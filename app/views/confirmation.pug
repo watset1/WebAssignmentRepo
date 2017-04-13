@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	h1 Thank you!
+	h3 Thanks for your contribution. We have added your submission to our scientists.
+	h3 Here is a copy of your suggestion for your records.
+	h1= record.name
+	h2 Bio
+	h3= record.bio
+	
+	a(href='../scientists') Return to list of scientists 

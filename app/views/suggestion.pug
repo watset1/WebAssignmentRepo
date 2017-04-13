@@ -1,0 +1,32 @@
+extends layout
+
+block content
+	h1 Suggest a Scientist
+	// suggest form
+	form(method='POST' action='/scientists/suggest')
+		div.form-group
+			label(for='name') Name:
+		
+		div.form-group
+			input#name.form-control(type='text', placeholder='first and last' size=50 name='name')
+		
+		div.form-group
+			label(for='bio') Bio:
+		
+		div.form-group
+			textarea(rows="8" cols="38")#bio.form-control(placeholder='a bit about the scientist' name='bio')
+		
+		div.form-group
+			label(for='dates') Date of Birth/Death:
+		
+		div.form-group
+			input#dates.form-control(type='text', placeholder='dd/mm/yyyy(birth) - dd/mm/yyyy(death)' size=50 name='dates')
+		
+		div.form-group
+			label(for='imagePath') Image:
+		
+		div.form-group
+			input#imagePath.form-control(type='text' placeholder='image url' size=50 name='imagePath')
+		
+		div.form-group
+			button.btn.btn-primary(type='submit') Submit Suggestion
